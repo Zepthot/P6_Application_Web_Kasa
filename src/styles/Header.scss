@@ -1,0 +1,64 @@
+.header-kasa {
+    height: 68px;
+    margin: 45px 100px 25px 100px;
+    display: flex;
+    justify-content: space-between;
+
+    img {
+        display: flex;
+        height: 68px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+
+        li {
+            font-family: 'Montserrat';
+            list-style-type: none;
+            font-size: 24px;
+            padding-left: 57px;
+
+            .link {
+                text-decoration: none;
+                color: #FF6060;
+                border-bottom: white 1px solid;
+                transition: border-bottom 0.5s, color 0.5s;
+            }
+
+            .link:hover {
+                text-decoration: none;
+                color: #FF6060;
+                border-bottom: #FF6060 1px solid;
+            }
+
+            .active {
+                border-bottom: #FF6060 1px solid;
+            }
+
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .header-kasa {
+    margin: 20px;
+    align-items: center;
+
+        img {
+            height: 46px;
+        }
+
+        nav {
+            ul {
+                align-items: center;
+                padding: 0;
+                li {
+                    font-size: 12px;
+                    padding-left: 26px;
+                }
+            }            
+        }
+    }
+}
+

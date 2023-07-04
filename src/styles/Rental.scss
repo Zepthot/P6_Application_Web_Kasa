@@ -1,0 +1,248 @@
+.rental-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    .rental-carousel {
+        display: flex;
+        position: relative;
+
+        button {
+            background-color: transparent;
+            border: none;
+            position: absolute;
+            top: 50%;
+            padding: 0;
+        }
+
+        .left {
+            transform: rotate(-90deg);
+            left: 10px;
+        }
+
+        .right {
+            right: 10px;
+            transform: rotate(90deg);
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+
+        .rental-carousel-img {
+            width: 1240px;
+            height: 415px;
+            display: flex;
+            flex-wrap: nowrap;
+            overflow: hidden;
+            position: relative;
+            border-radius: 25px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                list-style-type: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+                
+                img {
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .rental-infos {
+        display: flex;
+        flex-direction: column;
+        width: 1240px;
+
+        h1 {
+            color: #FF6060;
+            font-family: 'Montserrat';
+            font-size: 36px;
+            font-weight: 500;
+            margin: 30px 0px 0px 0px;
+        }
+        
+        h2 {
+            color: #FF6060;
+            font-family: 'Montserrat';
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0px 0px 20px 0px;
+        }
+
+        .rental-info {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .rental-host-rating {
+                display: flex;
+                flex-direction: column;
+                margin: 30px 0px 0px 0px;
+
+                .rental-host {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    gap: 10px;
+
+                    .rental-hostname {
+                        color: #FF6060;
+                        font-family: 'Montserrat';
+                        font-size: 18px;
+                        font-weight: 500;
+                    }
+
+                    img {
+                        border-radius: 50%;
+                        width: 64px;
+                        height: 64px;
+                    }
+                }
+
+                .rental-rating {
+                    margin: 21px 0 0 0;
+                    padding: 0;
+                    list-style-type: none;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    gap: 16px;
+                }
+            }
+
+            .rental-tag {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                margin: 0;
+                padding: 0;
+
+                .rental-tags {
+                    list-style-type: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    min-width: 100px;
+                    height: 25px;
+                    border-radius: 10px;
+                    background-color: #FF6060;
+                    color: white;
+                    font-family: 'Montserrat';
+                    font-size: 14px;
+                    font-weight: 500;
+                    padding: 0px 10px;
+                }
+            }
+        }
+
+        .rental-collapse {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-top: 24px;
+            gap: 76px;
+            min-height: 55px;
+
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 20px;
+
+                .rental-stuff {
+                    font-family: 'Montserrat';
+                    font-size: 18px;
+                    font-weight: 400;
+                    padding-bottom: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .rental-main {
+        margin: 0px 20px 20px 20px;
+
+        .rental-carousel {
+            width: 100%;
+
+            .rental-carousel-img {
+                height: 255px;
+                border-radius: 10px;
+
+                li img {
+                    width: 400px;
+                    height: 300px;
+                }
+            }
+        }
+
+        .rental-infos {
+            width: auto;
+            
+            h1 {
+                font-size: 18px;
+            }
+
+            h2 {
+                font-size: 14px;
+            }
+
+            .rental-info {
+                flex-direction: column;
+                align-items: flex-start;
+
+                .rental-host-rating {
+                    width: 100%;
+                    flex-direction: row-reverse;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 15px 0px 0px 0px;
+
+                    .rental-host {
+                        .rental-hostname {
+                            font-size: 12px;
+                        }
+
+                        img {
+                            width: 32px;
+                            height: 32px;
+                        }
+                    }
+
+                    .rental-rating {
+                        gap: 5px;
+                        margin: 0;
+
+                        li img {
+                            width: 13px;
+                            height: 13px;
+                        }
+                    }
+                }
+
+                .rental-tag {
+                    .rental-tags {
+                        height: 18px;
+                        font-size: 10px;
+                        min-width: 84px;
+                    }
+                }
+            }
+
+            .rental-collapse {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    }
+}
